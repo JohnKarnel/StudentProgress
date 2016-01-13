@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7499BBA1-9AF6-4E02-9E22-C20842C9A985}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Client</RootNamespace>
+    <AssemblyName>Client</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdministrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministrationForm.Designer.cs">
+      <DependentUpon>AdministrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttendanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceForm.Designer.cs">
+      <DependentUpon>AttendanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationForm.Designer.cs">
+      <DependentUpon>ConfigurationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreationTimeTableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreationTimeTableForm.Designer.cs">
+      <DependentUpon>CreationTimeTableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrationForm.Designer.cs">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentStatisticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentStatisticsForm.Designer.cs">
+      <DependentUpon>StudentStatisticsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkForm.Designer.cs">
+      <DependentUpon>WorkForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\StudentService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdministrationForm.resx">
+      <DependentUpon>AdministrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceForm.resx">
+      <DependentUpon>AttendanceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationForm.resx">
+      <DependentUpon>ConfigurationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreationTimeTableForm.resx">
+      <DependentUpon>CreationTimeTableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrationForm.resx">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentStatisticsForm.resx">
+      <DependentUpon>StudentStatisticsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkForm.resx">
+      <DependentUpon>WorkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\StudentLogic.Group.datasource" />
+    <None Include="Properties\DataSources\StudentLogic.Presence.datasource" />
+    <None Include="Properties\DataSources\StudentLogic.Student.datasource" />
+    <None Include="Properties\DataSources\StudentLogic.StudingTheSubject.datasource" />
+    <None Include="Properties\DataSources\StudentLogic.Subject.datasource" />
+    <None Include="Properties\DataSources\StudentLogic.Teacher.datasource" />
+    <None Include="Properties\DataSources\StudentLogic.TimeTable.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\StudentService\Client.StudentService.GetNextPairResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\StudentService\StudentService.wsdl" />
+    <None Include="Service References\StudentService\StudentService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StudentService\StudentService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StudentService\StudentService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StudentService\StudentService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StudentService\StudentService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StudentLogic\StudentLogic.csproj">
+      <Project>{895c02e1-1454-4142-bd26-5f4f0543e331}</Project>
+      <Name>StudentLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\StudentService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StudentService\StudentService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StudentService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StudentService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StudentService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\real_estate_b1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee-login-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gateway-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginButton1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3bloknot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w256h2561339870375Qualificationhistory256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w512h5121380984696edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kpi-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\28509.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4598959_8013f4b4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5311b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5311b1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5311b2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notifications.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w128h1281338911352group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\выпускник.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1332785359_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1332785359_21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Иконка_стрелки_вправо_%28ei%29.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14242093572-imgp8800-fb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7ad60124641dbbfb3c3a500fc1f711f8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KPI.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ffGOjAVYwuA.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\todo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Setting-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w256h2561339870252Briefcase256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\changeя.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w512h5121380984637delete1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\informacion_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w256h2561372351012Increase256.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

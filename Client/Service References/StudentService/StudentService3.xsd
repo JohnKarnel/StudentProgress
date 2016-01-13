@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/StudentLogic" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/StudentLogic" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8190/StudentService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost:8190/StudentService?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:complexType name="Teacher">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseOfTeacherrgiJDJ0C">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="_pname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="_sname" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Teacher" nillable="true" type="tns:Teacher" />
+  <xs:complexType name="BaseOfTeacherrgiJDJ0C">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="BaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/StudentLogic" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Teacher" Namespace="http://schemas.datacontract.org/2004/07/StudentLogic" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_id" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseOfTeacherrgiJDJ0C" nillable="true" type="tns:BaseOfTeacherrgiJDJ0C" />
+  <xs:complexType name="ArrayOfStudingTheSubject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StudingTheSubject" nillable="true" type="tns:StudingTheSubject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStudingTheSubject" nillable="true" type="tns:ArrayOfStudingTheSubject" />
+  <xs:complexType name="StudingTheSubject">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseOfStudingTheSubjectrgiJDJ0C">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="_classroom" type="xs:int" />
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="_day" type="q1:DayOfWeek" />
+          <xs:element minOccurs="0" name="_groupId" type="ser:guid" />
+          <xs:element minOccurs="0" name="_subjectId" type="ser:guid" />
+          <xs:element minOccurs="0" name="_teacherId" type="ser:guid" />
+          <xs:element minOccurs="0" name="_typeOfPair" type="tns:TypeOfPair" />
+          <xs:element minOccurs="0" name="_typeOfWeek" type="tns:TypeOfWeek" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StudingTheSubject" nillable="true" type="tns:StudingTheSubject" />
+  <xs:complexType name="BaseOfStudingTheSubjectrgiJDJ0C">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="BaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/StudentLogic" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="StudingTheSubject" Namespace="http://schemas.datacontract.org/2004/07/StudentLogic" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_id" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseOfStudingTheSubjectrgiJDJ0C" nillable="true" type="tns:BaseOfStudingTheSubjectrgiJDJ0C" />
+  <xs:simpleType name="TypeOfPair">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="First" />
+      <xs:enumeration value="Second" />
+      <xs:enumeration value="Third" />
+      <xs:enumeration value="Fourth" />
+      <xs:enumeration value="Fifth" />
+      <xs:enumeration value="Undefined" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TypeOfPair" nillable="true" type="tns:TypeOfPair" />
+  <xs:simpleType name="TypeOfWeek">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="First" />
+      <xs:enumeration value="Second" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TypeOfWeek" nillable="true" type="tns:TypeOfWeek" />
+  <xs:complexType name="Student">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseOfStudentrgiJDJ0C">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="_groupId" type="ser:guid" />
+          <xs:element minOccurs="0" name="_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="_pname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="_sname" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Student" nillable="true" type="tns:Student" />
+  <xs:complexType name="BaseOfStudentrgiJDJ0C">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="BaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/StudentLogic" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Student" Namespace="http://schemas.datacontract.org/2004/07/StudentLogic" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_id" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseOfStudentrgiJDJ0C" nillable="true" type="tns:BaseOfStudentrgiJDJ0C" />
+  <xs:complexType name="ArrayOfGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Group" nillable="true" type="tns:Group" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGroup" nillable="true" type="tns:ArrayOfGroup" />
+  <xs:complexType name="Group">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseOfGrouprgiJDJ0C">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="_name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Group" nillable="true" type="tns:Group" />
+  <xs:complexType name="BaseOfGrouprgiJDJ0C">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="BaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/StudentLogic" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Group" Namespace="http://schemas.datacontract.org/2004/07/StudentLogic" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_id" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseOfGrouprgiJDJ0C" nillable="true" type="tns:BaseOfGrouprgiJDJ0C" />
+  <xs:complexType name="ArrayOfSubject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Subject" nillable="true" type="tns:Subject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSubject" nillable="true" type="tns:ArrayOfSubject" />
+  <xs:complexType name="Subject">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseOfSubjectrgiJDJ0C">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="_name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Subject" nillable="true" type="tns:Subject" />
+  <xs:complexType name="BaseOfSubjectrgiJDJ0C">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="BaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/StudentLogic" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Subject" Namespace="http://schemas.datacontract.org/2004/07/StudentLogic" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_id" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseOfSubjectrgiJDJ0C" nillable="true" type="tns:BaseOfSubjectrgiJDJ0C" />
+  <xs:complexType name="ArrayOfStudent">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Student" nillable="true" type="tns:Student" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStudent" nillable="true" type="tns:ArrayOfStudent" />
+  <xs:complexType name="TimeTable">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseOfTimeTablergiJDJ0C">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="_firstWeek" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="_secondWeek" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="_teacherId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TimeTable" nillable="true" type="tns:TimeTable" />
+  <xs:complexType name="BaseOfTimeTablergiJDJ0C">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="BaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/StudentLogic" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="TimeTable" Namespace="http://schemas.datacontract.org/2004/07/StudentLogic" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_id" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseOfTimeTablergiJDJ0C" nillable="true" type="tns:BaseOfTimeTablergiJDJ0C" />
+  <xs:complexType name="ArrayOfPresence">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Presence" nillable="true" type="tns:Presence" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPresence" nillable="true" type="tns:ArrayOfPresence" />
+  <xs:complexType name="Presence">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseOfPresencergiJDJ0C">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="_date" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="_pairId" type="ser:guid" />
+          <xs:element minOccurs="0" name="_presencing" type="xs:boolean" />
+          <xs:element minOccurs="0" name="_studentId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Presence" nillable="true" type="tns:Presence" />
+  <xs:complexType name="BaseOfPresencergiJDJ0C">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="BaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/StudentLogic" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Presence" Namespace="http://schemas.datacontract.org/2004/07/StudentLogic" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_id" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseOfPresencergiJDJ0C" nillable="true" type="tns:BaseOfPresencergiJDJ0C" />
+</xs:schema>
